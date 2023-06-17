@@ -1,0 +1,7 @@
+= Kafka OTel Metrics Reporter (WIP)
+
+An OpenTelemetry implementation of `org.apache.kafka.common.metrics.MetricsReporter` interface.
+
+Can be used by setting the link:https://kafka.apache.org/documentation.html#brokerconfigs_metric.reporters[metric.reporters] attribute of Kafka, Connect, Kafka Streams or Clients to `net.uweeisele.kafka.metrics.reporter.otel.OtelMetricsReporter`.
+
+Supports collection of metrics directly with OpenTelemetry without detour over JMX. You could even disable `org.apache.kafka.common.metrics.JmxReporter` by setting link:https://kafka.apache.org/documentation.html#producerconfigs_auto.include.jmx.reporter[auto.include.jmx.reporter] to `false`.
